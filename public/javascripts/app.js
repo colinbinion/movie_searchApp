@@ -5,5 +5,19 @@ myApp.controller('controllerName', function($scope, $http){
     fetch();
   });
 
-  
+  // $scope.search = "";
+
+  function fetch () {
+    $http.get("OMDB API" + scope.search + "tomatoes info http")
+      .then(function(response) {
+        $scope.details = response.data;
+      });
+
+  function fetch () {
+    $http.get("OMDB API" + scope.search)
+      .then(function(response) {
+        $scope.details = response.data;
+      });
+
+  }
 })
